@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Клуб четырех коней</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <div class="header__main">
+        <a href="#"
+          ><img
+            src="<%=require('./assets/Logo.svg')%>"
+            class="header__logo"
+            alt="Логотип Место"
+        /></a>
+        <div class="header__content">
+          <p class="header__text header__text_left">Превратите уездный город</p>
+          <p class="header__text header__text_center">в столицу земного шара</p>
+          <div class="header__textBlock">
+            <p class="header__text_small">
+              Оплатите взнос на телеграммы для организации
+            </p>
+            <p class="header__text_small">
+              Международного васюкинского турнира по шахматам
+            </p>
+          </div>
+          <div class="header__buttons">
+            <button
+              class="button button_big button_primary"
+              type="button"
+              name="supportButton"
+            >
+              Поддержать шахматную мысль
+            </button>
+            <button
+              class="button button_big button_secondary"
+              type="button"
+              name="learnMoreButton"
+            >
+              Подробнее о турнире
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header__line"></div>
+    </header>
+  </body>
+</html>
