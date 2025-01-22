@@ -61,11 +61,3 @@
   display: flex;
   gap: 16px;
 }
-
-.header__line {
-  height: 24px;
-  padding: 18px 12px;
-  /* align-items: center;
-  gap: 12px; */
-  background-color: #f54932;
-}
