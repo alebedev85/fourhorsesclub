@@ -10,5 +10,17 @@
 /* Button */
 @import url(./blocks/button/button.css);
 
-/* Button */
+/* Running Line */
 @import url(./blocks/runningLine/runningLine.css);
+
+/* Content */
+@import url(./blocks/content/content.css);
+
+/* Info */
+@import url(./blocks/info/info.css);
+
+/* Table */
+@import url(./blocks/table/table.css);
+
+/* Footer */
+@import url(./blocks/footer//footer.css);
