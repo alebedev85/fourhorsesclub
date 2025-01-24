@@ -25,11 +25,15 @@
           ><img
             src="<%=require('./assets/Logo.svg')%>"
             class="header__logo"
-            alt="Логотип Место"
+            alt="Логотип Клуба четырёх коней"
         /></a>
         <div class="header__content">
-          <p class="header__text header__text_left">Превратите уездный город</p>
-          <p class="header__text header__text_center">в столицу земного шара</p>
+          <h1 class="header__text header__text_left">
+            Превратите уездный город
+          </h1>
+          <h1 class="header__text header__text_center">
+            в столицу земного шара
+          </h1>
           <div class="header__textBlock">
             <p class="header__text_small">
               Оплатите взнос на телеграммы для организации
@@ -144,6 +148,8 @@
         </span>
       </div>
     </div>
+    <section class="elements" aria-label="Этапы преображения Васюков">
+    </section>
     <footer class="footer">
       <div class="footer__content">
         <p class="footer__text">
@@ -153,5 +159,12 @@
         </p>
       </div>
     </footer>
+
+    <template class="stage-template">
+      <article class="stage">
+        <p class="stage__id"></p>
+        <p class="stage__text"></p>
+      </article>
+    </template>
   </body>
 </html>
