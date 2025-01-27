@@ -1,0 +1,45 @@
+.stagesBlock {
+  padding-top: 166px;
+}
+.stagesBlock__title {
+  max-width: 806px;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Merriweather;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 64.8px */
+  text-transform: uppercase;
+  margin-bottom: 54px;
+}
+.stagesBlock__span {
+  color: #3057a2;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.stagesBlock__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "area-1 area-2 area-3"
+    "area-4 area-5 area-3"
+    "area-6 area-7 area-7";
+  gap: 16px;
+}
+
+.stagesBlock__img {
+  position: absolute;
+  right: -37px;
+  bottom:15px;
+  width: 376px;
+  height: 210px;
+  background-image: url("../../assets/airplane.png");
+  z-index: 1;
+
+}

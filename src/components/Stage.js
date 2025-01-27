@@ -20,6 +20,7 @@ export default class Stage {
   createStage() {
     this._cardId.textContent = this._id;
     this._cardText.textContent = this._text;
+    this._element.style.gridArea = 'area-' + this._id
 
     return this._element;
   }

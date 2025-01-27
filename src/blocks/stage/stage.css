@@ -1,0 +1,35 @@
+.stage {
+  display: flex;
+  background-color: #e9ded4;
+  background-image: url('../../assets/background.png');
+  object-fit: contain;
+  padding: 20px;
+  gap: 16px;
+}
+
+.stage__id {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.stage__text {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  max-width: 353px;
+}

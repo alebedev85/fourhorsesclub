@@ -22,5 +22,11 @@
 /* Table */
 @import url(./blocks/table/table.css);
 
+/* Stages Block */
+@import url(./blocks/stagesBlock/stagesBlock.css);
+
+/* Stage */
+@import url(./blocks/stage/stage.css);
+
 /* Footer */
 @import url(./blocks/footer//footer.css);
