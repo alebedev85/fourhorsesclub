@@ -23,10 +23,16 @@
 @import url(./blocks/table/table.css);
 
 /* Stages Block */
-@import url(./blocks/stagesBlock/stagesBlock.css);
+@import url(./blocks/stagesSection/stagesSection.css);
 
 /* Stage */
 @import url(./blocks/stage/stage.css);
+
+/* Participants */
+@import url(./blocks/participants/participants.css);
+
+/* ParticipantCard */
+@import url(./blocks/participantCard/participantCard.css);
 
 /* Footer */
 @import url(./blocks/footer//footer.css);

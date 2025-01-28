@@ -133,12 +133,17 @@
           </div>
         </div>
       </section>
-      <section class="stagesBlock" aria-label="Этапы преображения Васюков">
-        <h2 class="stagesBlock__title">Этапы преображения Васюков
-          <!-- <span class="stagesBlock__span">Будущие источники обогащения васюкинцев</span> -->
+      <section class="stagesSection" aria-label="Этапы преображения Васюков">
+        <h2 class="stagesSection__title">Этапы преображения Васюков
+          <!-- <span class="stagesSection__span">Будущие источники обогащения васюкинцев</span> -->
         </h2>
-        <div class="stagesBlock__container">
-          <div class="stagesBlock__img"></div>
+        <div class="stagesSection__container">
+          <div class="stagesSection__img"></div>
+        </div>
+      </section>
+      <section class="participantsSection" aria-label="Участники турнира">
+        <h1 class="participantsSection__title">Участники турнира</h1>
+        <div class="participantsSection__container">
         </div>
       </section>
     </main>
@@ -170,6 +175,15 @@
       <article class="stage">
         <p class="stage__id"></p>
         <p class="stage__text"></p>
+      </article>
+    </template>
+
+    <template class="participantCard-template">
+      <article class="participantCard">
+        <img class="participantCard__image" src="<%=require('./assets/participantsAvatar.png')%>" alt="Фото участника">
+        <p class="participantCard__name"></p>
+        <p class="participantCard__disc"></p>
+        <button class="button button_small" type="button" name="details-button">Подробнее</button>
       </article>
     </template>
   </body>

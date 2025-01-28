@@ -1,7 +1,7 @@
-.stagesBlock {
+.stagesSection {
   padding-top: 166px;
 }
-.stagesBlock__title {
+.stagesSection__title {
   max-width: 806px;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Merriweather;
@@ -12,7 +12,7 @@
   text-transform: uppercase;
   margin-bottom: 54px;
 }
-.stagesBlock__span {
+.stagesSection__span {
   color: #3057a2;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: "Golos Text";
@@ -21,7 +21,7 @@
   font-weight: 400;
   line-height: 120%;
 }
-.stagesBlock__container {
+.stagesSection__container {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -33,13 +33,12 @@
   gap: 16px;
 }
 
-.stagesBlock__img {
+.stagesSection__img {
   position: absolute;
   right: -37px;
-  bottom:15px;
+  bottom: 15px;
   width: 376px;
   height: 210px;
   background-image: url("../../assets/airplane.png");
   z-index: 1;
-
 }

@@ -1,0 +1,29 @@
+.participantCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 394px;
+  height: 468px;
+}
+.participantCard__image {
+  width: 320px;
+  height: 320px;
+}
+.participantCard__name {
+  margin-top: 17px;
+  font-family: "Golos Text";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.participantCard__disc {
+  margin-top: 6px;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.6;
+}

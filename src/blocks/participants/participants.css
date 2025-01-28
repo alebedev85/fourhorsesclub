@@ -1,0 +1,19 @@
+.participantsSection {
+  padding-top: 208px;
+  padding-bottom: 56px;
+}
+.participantsSection__title {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Merriweather;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 64.8px */
+  text-transform: uppercase;
+}
+.participantsSection__container {
+  margin-top: 58px;
+  display: flex;
+  gap: 6px;
+}
+

@@ -12,11 +12,11 @@
 
 .button_primary {
   background: #1f1f1f;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button_primary:hover {
-  background: #FBCE51;
+  background: #fbce51;
   color: inherit;
 }
 
@@ -26,9 +26,25 @@
 
 .button_secondary:hover {
   background: #1f1f1f;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button_big {
   width: 542px;
+}
+
+.button_small {
+  border-radius: 62px;
+  border: 1px solid #3057a2;
+  color: #3057a2;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  line-height: 120%;
+}
+
+.button_small:hover{
+  background: #3057A2;
+  color: #ffffff;
 }
