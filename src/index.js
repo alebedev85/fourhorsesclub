@@ -45,3 +45,14 @@ const participantsSection = new ParticipantsSection(
 
 stagesSection.renderItems(stages);
 participantsSection.renderItems(participants);
+
+
+//Slider//
+const slider = document.querySelector('.slider');
+const sliderButtonLeft = document.querySelector('.slider__button_left');
+const sliderButtonRight = document.querySelector('.slider__button_right');
+const slides = Array.from(slider.querySelectorAll('.participantCard'));
+const slideCount = slides.length;
+let slideIndex = 0;
+
+console.log(slides)

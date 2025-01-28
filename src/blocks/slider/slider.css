@@ -1,0 +1,37 @@
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  position: absolute;
+  right: 0;
+  top: -113px;
+}
+.slider__button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+}
+.slider__button_left {
+  background-image: url("../../assets/carouselButtonLeft.svg");
+  object-fit: contain;
+}
+.slider__button_right {
+  background-image: url("../../assets/carouselButtonRight.svg");
+  object-fit: contain;
+}
+.slider__counter {
+  display: flex;
+  gap: 1px;
+  font-family: "Golos Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.counter__courant {
+}
+.counter__all {
+  opacity: 0.6;
+}

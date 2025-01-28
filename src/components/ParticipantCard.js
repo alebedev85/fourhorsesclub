@@ -18,8 +18,8 @@ export default class ParticipantCard {
   }
 
   createParticipantCard() {
-    this._cardId.textContent = this._id;
-    this._cardText.textContent = this._text;
+    this._cardId.textContent = this._name;
+    this._cardText.textContent = this._status;
 
     return this._element;
   }

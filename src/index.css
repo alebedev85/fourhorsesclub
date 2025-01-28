@@ -31,6 +31,9 @@
 /* Participants */
 @import url(./blocks/participants/participants.css);
 
+/* Slider */
+@import url(./blocks/slider/slider.css);
+
 /* ParticipantCard */
 @import url(./blocks/participantCard/participantCard.css);
 
