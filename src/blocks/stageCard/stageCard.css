@@ -1,4 +1,4 @@
-.stage {
+.stageCard {
   display: flex;
   background-color: #e9ded4;
   background-image: url('../../assets/background.png');
@@ -7,7 +7,7 @@
   gap: 16px;
 }
 
-.stage__id {
+.stageCard__id {
   width: 36px;
   height: 36px;
   flex-shrink: 0;
@@ -24,7 +24,7 @@
   box-sizing: border-box;
 }
 
-.stage__text {
+.stageCard__text {
   font-variant-numeric: lining-nums proportional-nums;
   font-family: "Golos Text";
   font-size: 20px;

@@ -1,7 +1,7 @@
 import "./index.css";
 
 import stages from "./scripts/stages";
-import Stage from "./components/Stage";
+import StageCard from "./components/StageCard";
 import StagesSection from "./components/StagesSection";
 import { stagesContainer, participantsContainer } from "./scripts/constants";
 import ParticipantCard from "./components/ParticipantCard";
@@ -9,12 +9,12 @@ import participants from "./scripts/participants";
 import ParticipantsSection from "./components/ParticipantsSection";
 
 //Create Stage//
-function createStage(item) {
-  const stage = new Stage(
+function createStageCard(item) {
+  const stage = new StageCard(
     item,
-    ".stage-template",
+    ".stageCard-template",
   );
-  return stage.createStage();
+  return stage.createStageCard();
 }
 
 //Create Participant//
@@ -29,7 +29,7 @@ function createParticipant(item) {
 //Create Cards From Array//
 const stagesSection = new StagesSection(
   {
-    renderer: createStage,
+    renderer: createStageCard,
   },
   stagesContainer
 );

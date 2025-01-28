@@ -25,8 +25,8 @@
 /* Stages Block */
 @import url(./blocks/stagesSection/stagesSection.css);
 
-/* Stage */
-@import url(./blocks/stage/stage.css);
+/* StageCard */
+@import url(./blocks/stageCard/stageCard.css);
 
 /* Participants */
 @import url(./blocks/participants/participants.css);
