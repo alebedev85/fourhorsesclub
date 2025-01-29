@@ -1,13 +1,12 @@
 {
   "name": "four-horses-club",
-  "homepage": "https://alebedev85.github.io/fourhorsesclub/",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Andrey Lebedev",
   "license": "MIT",
@@ -28,6 +27,6 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "core-js": "2"
+    "core-js": "^3.40.0"
   }
 }

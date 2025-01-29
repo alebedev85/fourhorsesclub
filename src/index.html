@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Клуб четырех коней</title>
+    <link rel="icon" href="<%=require('./assets/favicon.svg')%>"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,20 +44,20 @@
             </p>
           </div>
           <div class="header__buttons">
-            <button
+            <a
               class="button button_big button_primary"
-              type="button"
               name="supportButton"
+              href="#support"
             >
               Поддержать шахматную мысль
-            </button>
-            <button
+            </a>
+            <a
               class="button button_big button_secondary"
-              type="button"
               name="learnMoreButton"
+              href="#info"
             >
               Подробнее о турнире
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -76,7 +77,7 @@
       </div>
     </header>
     <main class="content">
-      <section class="info" aria-label="Информация о мероприятие">
+      <section class="info" aria-label="Информация о мероприятие" id="support">
         <div class="info__lecture">
           <h2 class="info__text">
             Чтобы поддержать Международный васюкинский турнир посетите лекцию на
@@ -133,7 +134,7 @@
           </div>
         </div>
       </section>
-      <section class="stagesSection" aria-label="Этапы преображения Васюков">
+      <section class="stagesSection" aria-label="Этапы преображения Васюков" id="info">
         <h2 class="stagesSection__title">
           Этапы преображения Васюков
           <!-- <span class="stagesSection__span">Будущие источники обогащения васюкинцев</span> -->

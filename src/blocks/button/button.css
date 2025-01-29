@@ -1,5 +1,6 @@
 .button {
-  align-items: center;
+  text-decoration: none;
+  text-align: center;
   font-family: "Golos Text";
   font-size: 16px;
   font-style: normal;
@@ -8,6 +9,7 @@
   border-radius: 66px;
   cursor: pointer;
   padding: 13px 45px;
+  flex-shrink: 1;
 }
 
 .button_primary {
@@ -22,6 +24,7 @@
 
 .button_secondary {
   border: 2px solid #1f1f1f;
+  color: #1f1f1f;
 }
 
 .button_secondary:hover {
