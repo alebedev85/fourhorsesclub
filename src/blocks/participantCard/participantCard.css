@@ -5,6 +5,7 @@
   justify-content: space-around;
   width: 394px;
   height: 468px;
+  flex-shrink: 1
 }
 .participantCard__image {
   width: 320px;

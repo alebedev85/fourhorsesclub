@@ -73,8 +73,8 @@
             присяжные заседатели! ●
           </span>
         </div>
+      </div>
     </header>
-    </div>
     <main class="content">
       <section class="info" aria-label="Информация о мероприятие">
         <div class="info__lecture">
@@ -134,7 +134,8 @@
         </div>
       </section>
       <section class="stagesSection" aria-label="Этапы преображения Васюков">
-        <h2 class="stagesSection__title">Этапы преображения Васюков
+        <h2 class="stagesSection__title">
+          Этапы преображения Васюков
           <!-- <span class="stagesSection__span">Будущие источники обогащения васюкинцев</span> -->
         </h2>
         <div class="stagesSection__container">
@@ -142,15 +143,28 @@
         </div>
       </section>
       <section class="participantsSection" aria-label="Участники турнира">
-        <h1 class="participantsSection__title">Участники турнира</h1>
-        <div class="participantsSection__container">
+        <div class="participantsSection__header">
+          <h1 class="participantsSection__title">Участники турнира</h1>
           <div class="slider">
-            <button class="slider__button slider__button_left" type="button" name="sliderButtonLeft"></button>
+            <button
+              class="slider__button slider__button_left"
+              type="button"
+              name="sliderButtonLeft"
+            ></button>
             <div class="slider__counter">
-              <p class="counter__courant">3</p>/<p class="counter__all">6</p>
+              <p class="counter__courant">3</p>
+              /
+              <p class="counter__all">6</p>
             </div>
-            <button class="slider__button slider__button_right" type="button" name="sliderButtonRight"></button>
+            <button
+              class="slider__button slider__button_right"
+              type="button"
+              name="sliderButtonRight"
+            ></button>
           </div>
+        </div>
+        <div class="participantsSection__slider">
+          <ul class="participantsSection__container"></ul>
         </div>
       </section>
     </main>
@@ -186,12 +200,18 @@
     </template>
 
     <template class="participantCard-template">
-      <article class="participantCard">
-        <img class="participantCard__image" src="<%=require('./assets/participantsAvatar.png')%>" alt="Фото участника">
+      <li class="participantCard">
+        <img
+          class="participantCard__image"
+          src="<%=require('./assets/participantsAvatar.png')%>"
+          alt="Фото участника"
+        />
         <p class="participantCard__name"></p>
         <p class="participantCard__disc"></p>
-        <button class="button button_small" type="button" name="details-button">Подробнее</button>
-      </article>
+        <button class="button button_small" type="button" name="details-button">
+          Подробнее
+        </button>
+      </li>
     </template>
   </body>
 </html>

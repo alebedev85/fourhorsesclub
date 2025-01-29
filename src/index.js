@@ -10,19 +10,13 @@ import ParticipantsSection from "./components/ParticipantsSection";
 
 //Create Stage//
 function createStageCard(item) {
-  const stage = new StageCard(
-    item,
-    ".stageCard-template",
-  );
+  const stage = new StageCard(item, ".stageCard-template");
   return stage.createStageCard();
 }
 
 //Create Participant//
 function createParticipant(item) {
-  const participant = new ParticipantCard(
-    item,
-    ".participantCard-template",
-  );
+  const participant = new ParticipantCard(item, ".participantCard-template");
   return participant.createParticipantCard();
 }
 
@@ -42,17 +36,33 @@ const participantsSection = new ParticipantsSection(
   participantsContainer
 );
 
-
 stagesSection.renderItems(stages);
 participantsSection.renderItems(participants);
 
-
 //Slider//
-const slider = document.querySelector('.slider');
-const sliderButtonLeft = document.querySelector('.slider__button_left');
-const sliderButtonRight = document.querySelector('.slider__button_right');
-const slides = Array.from(slider.querySelectorAll('.participantCard'));
-const slideCount = slides.length;
-let slideIndex = 0;
+let width = 320 + 94; // ширина картинки
+let count = 3; // видимое количество изображений
 
-console.log(slides)
+const slider = document.querySelector(".participantsSection__container");
+const sliderButtonLeft = document.querySelector(".slider__button_left");
+const sliderButtonRight = document.querySelector(".slider__button_right");
+const slides = slider.querySelectorAll("li");
+const slideCount = slides.length;
+
+let position = 0;
+
+sliderButtonRight.onclick = function () {
+  // сдвиг вправо
+  position -= width * count;
+  // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
+  position = Math.max(position, -width * (slideCount - count));
+  slider.style.marginLeft = position + "px";
+};
+
+sliderButtonLeft.onclick = function () {
+  // сдвиг вправо
+  position += width * count;
+  // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
+  position = Math.max(position, -width * (slideCount - count));
+  slider.style.marginLeft = position + "px";
+};

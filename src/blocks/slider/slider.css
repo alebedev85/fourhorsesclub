@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   gap: 19px;
-  position: absolute;
   right: 0;
   top: -113px;
 }
@@ -11,6 +10,10 @@
   height: 44px;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
+}
+.slider__button:hover {
+  opacity: 0.8;
 }
 .slider__button_left {
   background-image: url("../../assets/carouselButtonLeft.svg");
