@@ -7,6 +7,7 @@ import { stagesContainer, participantsContainer } from "./scripts/constants";
 import ParticipantCard from "./components/ParticipantCard";
 import participants from "./scripts/participants";
 import ParticipantsSection from "./components/ParticipantsSection";
+import Carousel from "./components/Carousel";
 
 //Create Stage//
 function createStageCard(item) {
@@ -40,48 +41,11 @@ stagesSection.renderItems(stages);
 participantsSection.renderItems(participants);
 
 //Slider//
-let width = 320 + 94; // ширина картинки
-let count = 3; // видимое количество изображений
+const carousel = new Carousel(320 + 94, 3, ".participantsSection__container");
 
-const slider = document.querySelector(".participantsSection__container");
 const sliderButtonLeft = document.querySelector(".slider__button_left");
 const sliderButtonRight = document.querySelector(".slider__button_right");
 
-sliderButtonRight.onclick = function () {
-  const slides = slider.querySelectorAll(".participantCard");
-  const slideCount = slides.length;
+sliderButtonRight.addEventListener("click", carousel.forward);
+sliderButtonLeft.addEventListener("click", carousel.backward);
 
-  slider.classList.add("sliding-transition");
-
-  slider.style.transform = `translateX(-${width * count}px)`;
-
-  setTimeout(() => {
-    Array.from(slides)
-      .slice(0, count)
-      .forEach((slide) => slider.appendChild(slide));
-
-    slider.classList.remove("sliding-transition");
-    slider.style.transform = "";
-  }, 500);
-};
-
-sliderButtonLeft.onclick = function () {
-  const slides = slider.querySelectorAll(".participantCard");
-  const slideCount = slides.length;
-
-  Array.from(slides)
-    .slice(slideCount - count, slideCount)
-    .reverse()
-    .forEach((slide) => slider.insertBefore(slide, slider.firstChild));
-
-  slider.style.transform = `translateX(-${width * count}px)`;
-
-  setTimeout(() => {
-    slider.style.transform = "";
-    slider.classList.add("sliding-transition");
-  }, 10);
-
-  setTimeout(() => {
-    slider.classList.remove("sliding-transition");
-  }, 490);
-};
