@@ -46,23 +46,42 @@ let count = 3; // видимое количество изображений
 const slider = document.querySelector(".participantsSection__container");
 const sliderButtonLeft = document.querySelector(".slider__button_left");
 const sliderButtonRight = document.querySelector(".slider__button_right");
-const slides = slider.querySelectorAll("li");
-const slideCount = slides.length;
-
-let position = 0;
 
 sliderButtonRight.onclick = function () {
-  // сдвиг вправо
-  position -= width * count;
-  // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-  position = Math.max(position, -width * (slideCount - count));
-  slider.style.marginLeft = position + "px";
+  const slides = slider.querySelectorAll(".participantCard");
+  const slideCount = slides.length;
+
+  slider.classList.add("sliding-transition");
+
+  slider.style.transform = `translateX(-${width * count}px)`;
+
+  setTimeout(() => {
+    Array.from(slides)
+      .slice(0, count)
+      .forEach((slide) => slider.appendChild(slide));
+
+    slider.classList.remove("sliding-transition");
+    slider.style.transform = "";
+  }, 500);
 };
 
 sliderButtonLeft.onclick = function () {
-  // сдвиг вправо
-  position += width * count;
-  // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-  position = Math.max(position, -width * (slideCount - count));
-  slider.style.marginLeft = position + "px";
+  const slides = slider.querySelectorAll(".participantCard");
+  const slideCount = slides.length;
+
+  Array.from(slides)
+    .slice(slideCount - count, slideCount)
+    .reverse()
+    .forEach((slide) => slider.insertBefore(slide, slider.firstChild));
+
+  slider.style.transform = `translateX(-${width * count}px)`;
+
+  setTimeout(() => {
+    slider.style.transform = "";
+    slider.classList.add("sliding-transition");
+  }, 10);
+
+  setTimeout(() => {
+    slider.classList.remove("sliding-transition");
+  }, 490);
 };
