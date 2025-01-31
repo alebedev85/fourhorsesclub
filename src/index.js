@@ -41,11 +41,21 @@ stagesSection.renderItems(stages);
 participantsSection.renderItems(participants);
 
 //Slider//
-const carousel = new Carousel(320 + 94, 3, ".participantsSection__container");
+const slideWidth = 320 + 94;
+const slideCount = 3;
+
+const carousel = new Carousel(
+  slideWidth,
+  slideCount,
+  ".participantsSection__container",
+  participants.length
+);
+
+carousel.setCurrentCount(slideCount);
+carousel.setTotalCount();
 
 const sliderButtonLeft = document.querySelector(".slider__button_left");
 const sliderButtonRight = document.querySelector(".slider__button_right");
 
 sliderButtonRight.addEventListener("click", carousel.forward);
 sliderButtonLeft.addEventListener("click", carousel.backward);
-
