@@ -21,6 +21,9 @@
 /* Table */
 @import url(./blocks/table/table.css);
 
+/* Table */
+@import url(./blocks/mobileTable/mobileTable.css);
+
 /* Stages Block */
 @import url(./blocks/stagesSection/stagesSection.css);
 

@@ -1,0 +1,27 @@
+.mobileTable {
+}
+.mobileTable__row {
+  border-bottom: 2px solid #d0d0d0;
+  padding: 2px 0;
+}
+.mobileTable__text {
+  padding: 6px 0;
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.mobileTable__text_title {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 988px) {
+  .mobileTable {
+    display: none;
+  }
+}
