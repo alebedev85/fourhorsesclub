@@ -8,6 +8,7 @@
   height: 100%;
   padding: 28px 72px;
   box-sizing: border-box;
+  background-color: #E9DED4;
   background-image: url("../../assets/header-1920-min.png");
   background-position: center;
   background-size: cover;
@@ -67,6 +68,8 @@
 
   .header__main {
     padding: 14px 18px;
+    background-position: 77% 100%;
+    background-size: 258%;
   }
 
   .header__logo {
