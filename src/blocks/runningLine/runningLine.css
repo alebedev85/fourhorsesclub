@@ -8,7 +8,6 @@
 }
 
 .runningLine {
-  height: 24px;
   padding: 18px 12px;
   background-color: #f54932;
   overflow: hidden;
@@ -33,4 +32,15 @@
   white-space: nowrap;
   flex-shrink: 0;
   -webkit-backface-visibility: hidden; /* Фикс возможного глюка с морганием в Сафари */
+}
+
+
+@media screen and (max-width: 694px) {
+  .runningLine {
+    padding: 10px 12px;
+}
+
+  .runningLine__item {
+    font-size: 16px;
+  }
 }

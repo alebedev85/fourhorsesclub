@@ -33,7 +33,7 @@
 }
 
 .button_big {
-  width: 542px;
+  /* width: 542px; */
 }
 
 .button_small {
@@ -47,7 +47,15 @@
   line-height: 120%;
 }
 
-.button_small:hover{
-  background: #3057A2;
+.button_small:hover {
+  background: #3057a2;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .button_secondary {
+    opacity: 0.9;
+    background-color: #fff;
+    border: none;
+  }
 }

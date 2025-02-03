@@ -16,7 +16,6 @@
 
 .header__content {
   width: 542px;
-  height: 444px;
   margin-top: 57px;
 }
 
@@ -49,7 +48,6 @@
 .header__text_small {
   color: #313131;
   text-align: center;
-  font-variant-numeric: lining-nums proportional-nums;
   font-family: "Golos Text";
   font-size: 18px;
   font-style: normal;
@@ -60,4 +58,42 @@
 .header__buttons {
   display: flex;
   gap: 16px;
+}
+
+@media screen and (max-width: 694px) {
+  .header {
+    height: 774px;
+  }
+
+  .header__main {
+    padding: 14px 18px;
+  }
+
+  .header__logo {
+    height: 39px;
+    width: 215px;
+  }
+
+  .header__content {
+    width: 100%;
+    margin-top: 34px;
+  }
+
+  .header__text {
+    font-size: 36px;
+  }
+
+  .header__textBlock {
+    margin: 24px 0 31px;
+  }
+
+  .header__text_small {
+    text-align: left;
+    width: 100%;
+  }
+
+  .header__buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
 }
