@@ -44,6 +44,13 @@ participantsSection.renderItems(participants);
 const slideWidth = 320 + 94;
 const slideCount = 3;
 
+function carouselLoop() {
+  setTimeout(() => {
+    carousel.forward();
+    carouselLoop();
+  }, 4000);
+}
+
 const carousel = new Carousel(
   slideWidth,
   slideCount,
@@ -59,3 +66,5 @@ const sliderButtonRight = document.querySelector(".slider__button_right");
 
 sliderButtonRight.addEventListener("click", carousel.forward);
 sliderButtonLeft.addEventListener("click", carousel.backward);
+
+carouselLoop();

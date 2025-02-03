@@ -43,7 +43,7 @@ export default class Carousel {
 
       this._carousel.classList.remove("sliding-transition");
       this._carousel.style.transform = "";
-    }, 500);
+    }, 1000);
   };
 
   backward = () => {
@@ -76,6 +76,6 @@ export default class Carousel {
 
     setTimeout(() => {
       this._carousel.classList.remove("sliding-transition");
-    }, 490);
+    }, 990);
   };
 }
