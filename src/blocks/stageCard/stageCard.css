@@ -1,7 +1,7 @@
 .stageCard {
   display: flex;
   background-color: #e9ded4;
-  background-image: url('../../assets/background.png');
+  background-image: url("../../assets/background.png");
   object-fit: contain;
   padding: 20px;
   gap: 16px;
@@ -32,4 +32,19 @@
   font-weight: 500;
   line-height: 120%;
   max-width: 353px;
+}
+
+@media screen and (max-width: 694px) {
+  .stageCard {
+    padding-top: 60px;
+  }
+
+  .stageCard__text {
+    font-size: 18px;
+    text-wrap: balance;
+  }
+
+  .stageCard:nth-child(2), .stageCard:nth-child(5){
+    padding-top: 0;
+  }
 }

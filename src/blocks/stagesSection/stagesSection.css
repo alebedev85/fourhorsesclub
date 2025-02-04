@@ -1,10 +1,10 @@
 .stagesSection {
   padding-top: 166px;
 }
+
 .stagesSection__title {
   max-width: 806px;
-  font-variant-numeric: lining-nums proportional-nums;
-  font-family: Merriweather;
+  font-family: "Merriweather";
   font-size: 54px;
   font-style: normal;
   font-weight: 400;
@@ -12,17 +12,21 @@
   text-transform: uppercase;
   margin-bottom: 54px;
 }
+
 .stagesSection__span {
   color: #3057a2;
-  font-variant-numeric: lining-nums proportional-nums;
   font-family: "Golos Text";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
 }
-.stagesSection__container {
+
+.stagesSection__content {
   position: relative;
+}
+
+.stagesSection__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
@@ -31,14 +35,40 @@
     "area-4 area-5 area-3"
     "area-6 area-7 area-7";
   gap: 16px;
+  overflow: hidden;
 }
 
 .stagesSection__img {
   position: absolute;
   right: -37px;
-  bottom: 15px;
+  bottom: 49px;
   width: 376px;
   height: 210px;
   background-image: url("../../assets/airplane.png");
   z-index: 1;
+}
+
+@media screen and (max-width: 694px) {
+  .stagesSection__title {
+    font-size: 36px;
+  }
+
+  .stagesSection__title {
+    margin-bottom: 140px;
+  }
+
+  .stagesSection__container {
+    grid-template-columns: repeat(5, 335px);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "area-1 area-3 area-4 area-6 area-7"
+      "area-2 area-3 area-5 area-6 area-7";
+    column-gap: 16px;
+    row-gap: 0;
+  }
+
+  .stagesSection__img {
+    left: -22px;
+    top: -165px;
+  }
 }
