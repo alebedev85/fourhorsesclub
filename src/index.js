@@ -2,11 +2,10 @@ import "./index.css";
 
 import stages from "./scripts/stages";
 import StageCard from "./components/StageCard";
-import StagesSection from "./components/StagesSection";
+import Section from "./components/Section";
 import { stagesContainer, participantsContainer } from "./scripts/constants";
 import ParticipantCard from "./components/ParticipantCard";
 import participants from "./scripts/participants";
-import ParticipantsSection from "./components/ParticipantsSection";
 import Carousel from "./components/Carousel";
 
 //Create Stage//
@@ -22,7 +21,7 @@ function createParticipant(item) {
 }
 
 //Create Cards From Array//
-const stagesSection = new StagesSection(
+const stagesSection = new Section(
   {
     renderer: createStageCard,
   },
@@ -30,7 +29,7 @@ const stagesSection = new StagesSection(
 );
 
 //Create Cards From Array//
-const participantsSection = new ParticipantsSection(
+const participantsSection = new Section(
   {
     renderer: createParticipant,
   },
