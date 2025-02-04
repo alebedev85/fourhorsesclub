@@ -5,12 +5,14 @@
   justify-content: space-around;
   width: 394px;
   height: 468px;
-  flex-shrink: 1
+  flex-shrink: 1;
 }
+
 .participantCard__image {
   width: 320px;
   height: 320px;
 }
+
 .participantCard__name {
   margin-top: 17px;
   font-family: "Golos Text";
@@ -18,7 +20,10 @@
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
+  text-align: center;
+  text-wrap: nowrap;
 }
+
 .participantCard__disc {
   margin-top: 6px;
   font-family: "Golos Text";
@@ -26,5 +31,37 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  text-align: center;
   opacity: 0.6;
+}
+
+@media screen and (max-width: 694px) {
+  .participantCard {
+    justify-content: unset;
+    height: auto;
+  }
+
+  .participantsSection__title {
+    font-size: 36px;
+  }
+
+  .participantCard__image {
+    width: 244px;
+    height: 244px;
+  }
+
+  .participantCard__name {
+    margin-top: 38px;
+  }
+
+  .participantCard__disc {
+    margin-bottom: 19px;
+    margin-top: 8px;
+  }
+
+  .participantsSection__buttons {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
 }

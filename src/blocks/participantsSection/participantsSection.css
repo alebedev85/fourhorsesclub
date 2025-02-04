@@ -3,13 +3,12 @@
   padding-bottom: 56px;
 }
 
-.participantsSection__header{
+.participantsSection__header {
   display: flex;
   justify-content: space-between;
 }
 
 .participantsSection__title {
-  font-variant-numeric: lining-nums proportional-nums;
   font-family: "Merriweather";
   font-size: 54px;
   font-style: normal;
@@ -18,11 +17,22 @@
   text-transform: uppercase;
 }
 
-.participantsSection__slider{
+.participantsSection__slider {
   position: relative;
   overflow: hidden;
   padding-left: 37px;
 }
+
+.participantsSection__content {
+  position: relative;
+}
+
+.participantsSection__buttons {
+  position: absolute;
+  right: 0px;
+  top: -55px;
+}
+
 .participantsSection__container {
   list-style: none;
   padding: 0;
@@ -30,10 +40,31 @@
   margin-top: 58px;
   display: flex;
   gap: 94px;
-  /* transition: margin-left 1s; */
 }
 
 .participantsSection__container.sliding-transition {
   transition: transform 1s ease-in-out;
 }
 
+
+@media screen and (max-width: 694px) {
+  .participantsSection {
+    padding-top: 182px;
+}
+
+
+  .participantsSection__title {
+    font-size: 36px;
+  }
+
+  .participantsSection__container {
+    margin-top: 30px;
+
+  }
+
+  .participantsSection__buttons {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+}

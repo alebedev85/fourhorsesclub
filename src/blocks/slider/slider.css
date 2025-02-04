@@ -1,9 +1,7 @@
 .slider__buttons {
   display: flex;
   align-items: center;
-  gap: 19px;
-  right: 0;
-  top: -113px;
+  gap: 16px;
 }
 .slider__button {
   width: 44px;

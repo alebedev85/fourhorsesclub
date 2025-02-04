@@ -58,7 +58,7 @@
   }
 
   .stagesSection__container {
-    grid-template-columns: repeat(5, 335px);
+    grid-template-columns: repeat(5, 100%);
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
       "area-1 area-3 area-4 area-6 area-7"
