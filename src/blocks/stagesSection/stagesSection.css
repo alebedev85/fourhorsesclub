@@ -59,6 +59,11 @@
 }
 
 @media screen and (max-width: 1006px) {
+  .stagesSection {
+    padding-top: 120px;
+  }
+
+
   .stagesSection__title {
     font-size: 36px;
   }

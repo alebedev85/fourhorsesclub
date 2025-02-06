@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 394px;
+  width: 320px;
   height: 468px;
-  flex-shrink: 1;
+  flex-shrink: 0;
 }
 
 .participantCard__image {
