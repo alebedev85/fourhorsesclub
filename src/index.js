@@ -40,30 +40,40 @@ stagesSection.renderItems(stages);
 participantsSection.renderItems(participants);
 
 //Slider//
+const sliderButtonLeft = document.querySelector(".slider__button_left");
+const sliderButtonRight = document.querySelector(".slider__button_right");
 const slideWidth = 320 + 94;
-const slideCount = 1;
+let slideCount;
 
-function carouselLoop() {
+function setCarousel() {
+  if (window.screen.width >= 1295) {
+    slideCount = 3;
+  } else if (window.screen.width >= 955) {
+    slideCount = 2;
+  } else {
+    slideCount = 1;
+  }
+  const carousel = new Carousel(
+    slideWidth,
+    slideCount,
+    ".participantsSection__container",
+    participants.length
+  );
+
+  carousel.setCurrentCount(slideCount);
+  carousel.setTotalCount();
+  sliderButtonRight.addEventListener("click", carousel.forward);
+  sliderButtonLeft.addEventListener("click", carousel.backward);
+  carouselLoop(carousel);
+}
+
+function carouselLoop(c) {
   setTimeout(() => {
-    carousel.forward();
-    carouselLoop();
+    c.forward();
+    carouselLoop(c);
   }, 4000);
 }
 
-const carousel = new Carousel(
-  slideWidth,
-  slideCount,
-  ".participantsSection__container",
-  participants.length
-);
+setCarousel();
 
-carousel.setCurrentCount(slideCount);
-carousel.setTotalCount();
-
-const sliderButtonLeft = document.querySelector(".slider__button_left");
-const sliderButtonRight = document.querySelector(".slider__button_right");
-
-sliderButtonRight.addEventListener("click", carousel.forward);
-sliderButtonLeft.addEventListener("click", carousel.backward);
-
-// carouselLoop();
+window.addEventListener("resize", setCarousel);

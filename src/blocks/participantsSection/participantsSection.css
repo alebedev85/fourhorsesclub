@@ -20,7 +20,7 @@
 .participantsSection__slider {
   position: relative;
   overflow: hidden;
-  padding-left: 37px;
+  margin: 0 auto;
 }
 
 .participantsSection__content {
@@ -46,12 +46,16 @@
   transition: transform 1s ease-in-out;
 }
 
-
-@media screen and (max-width: 694px) {
-  .participantsSection {
-    padding-top: 182px;
+@media screen and (max-width: 1295px) {
+  .participantsSection__slider {
+    max-width: 735px;
+  }
 }
 
+@media screen and (max-width: 955px) {
+  .participantsSection {
+    padding-top: 182px;
+  }
 
   .participantsSection__title {
     font-size: 36px;
@@ -59,7 +63,10 @@
 
   .participantsSection__container {
     margin-top: 30px;
+  }
 
+  .participantsSection__slider {
+    max-width: 320px;
   }
 
   .participantsSection__buttons {

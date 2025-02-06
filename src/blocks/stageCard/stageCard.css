@@ -13,7 +13,6 @@
   flex-shrink: 0;
   border-radius: 50%;
   background-color: #ffffff;
-  font-variant-numeric: lining-nums proportional-nums;
   font-family: "Golos Text";
   font-size: 20px;
   font-style: normal;
@@ -25,7 +24,6 @@
 }
 
 .stageCard__text {
-  font-variant-numeric: lining-nums proportional-nums;
   font-family: "Golos Text";
   font-size: 20px;
   font-style: normal;
@@ -34,11 +32,13 @@
   max-width: 353px;
 }
 
-@media screen and (max-width: 694px) {
+@media screen and (max-width: 1270px) {
   .stageCard {
     padding-top: 60px;
   }
+}
 
+@media screen and (max-width: 694px) {
   .stageCard__text {
     font-size: 18px;
     text-wrap: balance;
