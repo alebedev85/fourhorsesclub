@@ -8,6 +8,7 @@ import ParticipantCard from "./components/ParticipantCard";
 import participants from "./scripts/participants";
 import setCarousel from "./scripts/setCarousel";
 import StagesCarousel from "./components/StagesCarousel";
+import Indicator from "./components/Indicator";
 
 //Create Stage//
 function createStageCard(item) {
@@ -56,5 +57,15 @@ const stagesCarousel = new StagesCarousel(
   carouselLeftButton,
   carouselRightButton
 );
-carouselLeftButton.addEventListener("click", stagesCarousel.backward);
-carouselRightButton.addEventListener("click", stagesCarousel.forward);
+
+const stagesIndicator = new Indicator(".stagesSlider__counter", 4);
+
+carouselLeftButton.addEventListener("click", () => {
+  stagesCarousel.backward();
+  stagesIndicator.decreaseIndex();
+
+});
+carouselRightButton.addEventListener("click", () => {
+  stagesCarousel.forward();
+  stagesIndicator.increaseIndex();
+});
