@@ -7,6 +7,7 @@ import { stagesContainer, participantsContainer } from "./scripts/constants";
 import ParticipantCard from "./components/ParticipantCard";
 import participants from "./scripts/participants";
 import setCarousel from "./scripts/setCarousel";
+import StagesCarousel from "./components/StagesCarousel";
 
 //Create Stage//
 function createStageCard(item) {
@@ -42,4 +43,18 @@ participantsSection.renderItems(participants);
 //Carousel//
 setCarousel(participants);
 
-window.addEventListener("resize", () => setCarousel(participants));
+window.addEventListener("resize", setCarousel);
+
+//StagesCarousel//
+const carouselLeftButton = document.querySelector(".stagesSlider__button_left");
+const carouselRightButton = document.querySelector(
+  ".stagesSlider__button_right"
+);
+
+const stagesCarousel = new StagesCarousel(
+  ".stagesSection__container",
+  carouselLeftButton,
+  carouselRightButton
+);
+carouselLeftButton.addEventListener("click", stagesCarousel.backward);
+carouselRightButton.addEventListener("click", stagesCarousel.forward);

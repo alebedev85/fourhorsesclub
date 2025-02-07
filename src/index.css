@@ -30,6 +30,9 @@
 /* StageCard */
 @import url(./blocks/stageCard/stageCard.css);
 
+/* stagesSlider */
+@import url(./blocks/stagesSlider/stagesSlider.css);
+
 /* Participants */
 @import url(./blocks/participantsSection/participantsSection.css);
 

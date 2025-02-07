@@ -22,8 +22,14 @@
   line-height: 120%;
 }
 
+.stagesSection__slider{
+  overflow: hidden;
+}
+
 .stagesSection__content {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .stagesSection__container {
@@ -35,7 +41,8 @@
     "area-4 area-5 area-3"
     "area-6 area-7 area-7";
   gap: 16px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  transition: transform 1s ease-in-out;
 }
 
 .stagesSection__img {
@@ -45,6 +52,8 @@
   width: 376px;
   height: 210px;
   background-image: url("../../assets/airplane.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
   z-index: 1;
 }
 
@@ -76,5 +85,6 @@
       "area-2 area-3 area-5 area-6 area-7";
     column-gap: 16px;
     row-gap: 0;
+    margin-bottom: 28px;
   }
 }

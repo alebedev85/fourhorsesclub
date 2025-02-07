@@ -1,0 +1,45 @@
+.stagesSlider__buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+}
+.stagesSlider__button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.stagesSlider__button:hover {
+  opacity: 0.8;
+}
+.stagesSlider__button_left {
+  background-image: url("../../assets/carouselButtonLeft.svg");
+  object-fit: contain;
+}
+.stagesSlider__button_right {
+  background-image: url("../../assets/carouselButtonRight.svg");
+  object-fit: contain;
+}
+.stagesSlider__counter {
+  display: flex;
+  gap: 6px;
+}
+
+.stagesSlider__point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.stagesSlider__point_active {
+  background-color: #313131;
+}
+
+@media screen and (min-width: 1006px) {
+  .stagesSlider__buttons {
+    display: none;
+  }
+}
