@@ -8,6 +8,7 @@ import ParticipantCard from "./components/ParticipantCard";
 import participants from "./scripts/participants";
 import setCarousel from "./scripts/setCarousel";
 import StagesCarousel from "./components/StagesCarousel";
+import throttle from "./scripts/throttle";
 
 //Create Stage//
 function createStageCard(item) {
@@ -43,7 +44,10 @@ participantsSection.renderItems(participants);
 //Carousel//
 setCarousel(participants);
 
-window.addEventListener("resize", setCarousel);
+window.addEventListener(
+  "resize",
+  throttle(() => setCarousel(participants), 1000)
+);
 
 //StagesCarousel//
 const carouselLeftButton = document.querySelector(".stagesSlider__button_left");
@@ -64,4 +68,3 @@ carouselLeftButton.addEventListener("click", () => {
 carouselRightButton.addEventListener("click", () => {
   stagesCarousel.forward();
 });
-

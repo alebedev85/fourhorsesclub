@@ -20,13 +20,10 @@ export default class Carousel {
 
   forward = () => {
     const slides = this._carousel.querySelectorAll("li");
-
     this._carousel.classList.add("sliding-transition");
-
     this._carousel.style.transform = `translateX(-${
       this._slideWidth * this._slideCount
     }px)`;
-
 
     if (this._slidesCurrentCount >= this._slidesTotalCount) {
       this._slidesCurrentCount = this._slideCount;
