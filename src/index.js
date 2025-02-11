@@ -60,8 +60,8 @@ const stagesCarousel = new StagesCarousel(
 
 carouselLeftButton.addEventListener("click", () => {
   stagesCarousel.backward();
-
 });
 carouselRightButton.addEventListener("click", () => {
   stagesCarousel.forward();
 });
+

@@ -13,10 +13,12 @@
   overflow: hidden;
 }
 
-.runningLine__content {
+.runningLine__list {
+  padding: 0;
+  margin: 0;
   display: flex;
-  animation: marquee 15s linear infinite ;
-  -webkit-transform-style: preserve-3d; /* Фикс возможного глюка с морганием в Сафари */
+  gap: 30px;
+  animation: marquee 10s linear infinite;
 }
 
 .runningLine__item {
@@ -34,11 +36,10 @@
   -webkit-backface-visibility: hidden; /* Фикс возможного глюка с морганием в Сафари */
 }
 
-
 @media screen and (max-width: 694px) {
   .runningLine {
     padding: 10px 12px;
-}
+  }
 
   .runningLine__item {
     font-size: 16px;
