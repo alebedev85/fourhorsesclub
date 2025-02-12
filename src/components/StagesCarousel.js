@@ -50,4 +50,8 @@ export default class StagesCarousel {
       this._carouselRightButton.disable = true;
     }
   };
+
+  reset = () => {
+    this._carousel.style.transform = `translateX(0px)`;
+  }
 }

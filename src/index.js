@@ -43,28 +43,37 @@ participantsSection.renderItems(participants);
 
 //Carousel//
 setCarousel(participants);
+setStagesCarousel();
+
+//StagesCarousel//
+
+function setStagesCarousel() {
+  const carouselLeftButton = document.querySelector(
+    ".stagesSlider__button_left"
+  );
+  const carouselRightButton = document.querySelector(
+    ".stagesSlider__button_right"
+  );
+  const stagesCarousel = new StagesCarousel(
+    ".stagesSection__container",
+    ".stagesSlider__counter",
+    carouselLeftButton,
+    carouselRightButton
+  );
+
+  stagesCarousel.reset();
+  carouselLeftButton.addEventListener("click", () => {
+    stagesCarousel.backward();
+  });
+  carouselRightButton.addEventListener("click", () => {
+    stagesCarousel.forward();
+  });
+}
 
 window.addEventListener(
   "resize",
-  throttle(() => setCarousel(participants), 1000)
+  throttle(() => {
+    setCarousel(participants);
+    setStagesCarousel();
+  }, 1000)
 );
-
-//StagesCarousel//
-const carouselLeftButton = document.querySelector(".stagesSlider__button_left");
-const carouselRightButton = document.querySelector(
-  ".stagesSlider__button_right"
-);
-
-const stagesCarousel = new StagesCarousel(
-  ".stagesSection__container",
-  ".stagesSlider__counter",
-  carouselLeftButton,
-  carouselRightButton
-);
-
-carouselLeftButton.addEventListener("click", () => {
-  stagesCarousel.backward();
-});
-carouselRightButton.addEventListener("click", () => {
-  stagesCarousel.forward();
-});
